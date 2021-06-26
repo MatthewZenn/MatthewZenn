@@ -1,4 +1,4 @@
-### Hi there 👋 I'm Mmatthew Zenn
+### Hi there 👋 I'm Matthew Zenn
 
 <p align="center">
     <img src="https://github-readme-stats.vercel.app/api?username=MatthewZenn&show_icons=true&theme=dark" height="168px">
