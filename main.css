@@ -33,11 +33,28 @@ header {
 
 #panel {
     position: absolute;
-    width: 300px;
+    width: 200px;
     height: 95%;
     bottom: 0;
-    left: -300px;
+    left: -200px;
     background-color: rgb(26, 26, 26);
     z-index: -1;
     transition-duration: 0.5s;
+    display: block;
+}
+
+a {
+    display: block;
+    position: relative;
+    top: 80px;
+    margin-bottom: 50px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14pt;
+    left: 20px;
+}
+
+a:hover {
+    color: rgb(0, 195, 255);
 }

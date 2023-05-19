@@ -8,6 +8,6 @@ ham.addEventListener("click", () => {
     }
     else {
         x = 0;
-        document.getElementById("panel").style.left = "-300px";
+        document.getElementById("panel").style.left = "-200px";
     }
 });
