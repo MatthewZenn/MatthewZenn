@@ -17,17 +17,17 @@ header {
 
 #logo {
     position: relative;
-    top: 20px;
+    top: 30px;
     left: 10px;
-    width: 50px;
+    width: 40px;
 }
 
 #title {
-    width: 250px;
+    width: 200px;
     height: auto;
     position: fixed;
     left: 50%;
-    top: 5px;
+    top: 10px;
     transform: translate(-50%, 0%);
 }
 
