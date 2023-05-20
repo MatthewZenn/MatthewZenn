@@ -1,7 +1,8 @@
 body, html {
     background-color: rgb(20, 20, 20);
     margin: 0 auto;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 header {
@@ -57,4 +58,14 @@ a {
 
 a:hover {
     color: rgb(0, 195, 255);
+}
+
+.placeholder {
+    position: fixed;
+    width: 50%;
+    padding: 0;
+    margin: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
