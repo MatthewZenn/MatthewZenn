@@ -37,6 +37,14 @@ function logic(){
       
       break;
 
+    case 'hello there':
+      textarea.innerHTML += 'GENERAL KENOBI! \n';
+      break;
+
+    case 'whoami':
+      
+      break;
+
     default:
       break;
   }
