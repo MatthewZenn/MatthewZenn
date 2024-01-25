@@ -2,7 +2,7 @@ body, html {
     background-color: rgb(20, 20, 20);
     font-family: Consolas;
     font-size: 14pt;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -41,7 +41,6 @@ body, html {
   min-height: 0px;
   overflow-y: auto;
   background-color: transparent;
-  pointer-events: none;
   color: #ffd097;
   text-shadow: #ffd45d 0px 0px 20px;
   white-space: pre-wrap;
@@ -83,7 +82,7 @@ body, html {
 }
 
 .noise {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -105,4 +104,15 @@ body, html {
   100% {
     transform: translateX(-10%) translateY(-10%);
   }
+}
+
+a {
+  text-decoration: none;
+  color: #9bf6ff;
+  text-shadow: #66dbff 0px 0px 20px;
+}
+
+a:hover {
+  background-color: #9bf6ff;
+  color: #292929;
 }

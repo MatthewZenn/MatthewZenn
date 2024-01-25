@@ -1,11 +1,8 @@
 var textarea = document.getElementById('textarea');
 var input = document.getElementById('input');
 var path = document.getElementById('path').innerHTML;
-
-const filepath = path;
 var command = '';
-
-var articles = ['Polybius.txt', 'Lorem.txt', 'Space.txt'];
+var articles = ['Polybius.txt', 'lorem.txt', 'Space.txt'];
 
 window.addEventListener('keypress', function(e) {
   if (e.key === 'Enter') {
@@ -16,7 +13,7 @@ window.addEventListener('keypress', function(e) {
 
 function logic(){
   command = input.value;
-  textarea.innerHTML += filepath + input.value + '\n';
+  textarea.innerHTML += path + input.value + '\n';
   input.value = '';
 
   switch (command) {
@@ -25,7 +22,7 @@ function logic(){
       break;
 
     case 'help':
-      textarea.innerHTML += "whoami \n" + "articles \n" + "help \n" +"clear \n";
+      textarea.innerHTML += "whoami \n" + "articles \n" + "help \n" +"socials \n" +"clear \n";
       break;
     case 'articles':
       textarea.innerHTML += articles.join("\n")+'\n';
@@ -39,6 +36,10 @@ function logic(){
       textarea.innerHTML += 'GENERAL KENOBI! \n';
       break;
 
+    case 'socials':
+      textarea.innerHTML += 'Github:    <a href="https://github.com/MatthewZenn">https://github.com/MatthewZenn</a> \n' + 'YouTube:    <a href="https://www.youtube.com/@ZennMagic">https://www.youtube.com/@ZennMagic</a> \n' + 'Instagram:    <a href="https://www.instagram.com/zenn.magic/">https://www.instagram.com/zenn.magic/</a> \n';
+      break;
+  
     default:
       articleFetch();
       break;
