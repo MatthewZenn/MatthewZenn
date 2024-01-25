@@ -4,9 +4,8 @@ var path = document.getElementById('path').innerHTML;
 
 const filepath = path;
 var command = '';
-var url = "file.txt";
 
-var articles = [];
+var articles = ['Polybius.txt', 'Lorem.txt', 'Space.txt'];
 
 window.addEventListener('keypress', function(e) {
   if (e.key === 'Enter') {
@@ -29,11 +28,11 @@ function logic(){
       textarea.innerHTML += "whoami \n" + "articles \n" + "help \n" +"clear \n";
       break;
     case 'articles':
-      
+      textarea.innerHTML += articles.join("\n")+'\n';
       break;
 
     case 'whoami':
-      
+      aboutFetch();
       break;
 
     case 'hello there':
@@ -41,14 +40,21 @@ function logic(){
       break;
 
     default:
-      fetchAsync();
-      textarea.innerHTML += data;
+      articleFetch();
       break;
   }
 }
 
-async function fetchAsync () {
+async function articleFetch () {
   let response = await fetch('https://matthewzenn.github.io/MatthewZenn/articles/'+command);
-  let data = await response.body();
-  return data;
+  let data = await response.text();
+  textarea.innerHTML += data+'\n';
+  return;
+}
+
+async function aboutFetch () {
+  let response = await fetch('https://matthewzenn.github.io/MatthewZenn/info/about.txt');
+  let data = await response.text();
+  textarea.innerHTML += data+'\n';
+  return;
 }
