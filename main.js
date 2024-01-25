@@ -1,13 +1,43 @@
-const ham = document.getElementById("logo");
-var x = 0;
+var textarea = document.getElementById('textarea');
+var input = document.getElementById('input');
+var root = document.getElementById('root').innerHTML;
+var path = document.getElementById('path').innerHTML;
+var paths = document.getElementById('paths').innerHTML;
 
-ham.addEventListener("click", () => {
-    if(x == 0) {
-        x = 1;
-        document.getElementById("panel").style.left = "0px";
-    }
-    else {
-        x = 0;
-        document.getElementById("panel").style.left = "-200px";
-    }
+const filepath = root+paths+path;
+var command = 'help';
+
+var articles = [];
+
+window.addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    logic();
+  }
 });
+
+function logic(){
+  command = input.value;
+  textarea.innerHTML += filepath + input.value + '\n';
+  input.value = '';
+
+  switch (command) {
+    case 'clear':
+      textarea.innerHTML = '';
+      break;
+
+    case 'help':
+      textarea.innerHTML += "whoami \n" + "articles \n" + "help \n" +"clear \n";
+      break;
+    case 'articles':
+      
+      break;
+
+    case 'whoami':
+      
+      break;
+
+    default:
+      break;
+  }
+}

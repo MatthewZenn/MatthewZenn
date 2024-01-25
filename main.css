@@ -1,114 +1,17 @@
 body, html {
     background-color: rgb(20, 20, 20);
-    overflow-x: hidden;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background: rgb(26, 26, 26);
-    display: block;
-    box-shadow: 0px 5px 10px rgb(14, 14, 14);
-}
-
-#logo {
-    position: relative;
-    top: 30px;
-    left: 10px;
-    width: 40px;
-}
-
-#title {
-    width: 200px;
-    height: auto;
-    position: fixed;
-    left: 50%;
-    top: 10px;
-    transform: translate(-50%, 0%);
-}
-
-#panel {
-    position: absolute;
-    width: 200px;
-    height: 95%;
-    bottom: 0;
-    left: -200px;
-    background-color: rgb(26, 26, 26);
-    z-index: -1;
-    transition-duration: 0.5s;
-    display: block;
-}
-
-.link {
-    display: block;
-    position: relative;
-    top: 80px;
-    margin-bottom: 50px;
-    color: white;
-    text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Consolas;
     font-size: 14pt;
-    left: 20px;
+    overflow: hidden;
 }
 
-a:hover {
-    color: rgb(0, 195, 255);
-}
-
-.placeholder {
-    position: fixed;
-    width: 50%;
-    padding: 0;
-    margin: none;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -99;
-}
-
-.list {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: absolute;
-    top: 100px;
-    left: 0;
-    z-index: -99;
-}
-
-.post {
-    width: 100%;
-    height: auto;
-    min-height: 150px;
-    display: inline-flex;
-    margin-bottom: 5px;
-    background-color: rgb(26, 26, 26);
-    padding: 10px;
-}
-
-.thumbnail {
-    margin: auto 10px;
-    width: 100px;
-    height: auto;
-    position: relative;
-    top: 50%;
-}
-
-.headline {
-    position: relative;
-    margin: auto;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: calc(100% + 3vw);
-    color: white;
-    text-decoration: none;
-    top: 50%;
+@font-face {
+  font-family: Consolas;
+  src: url(Assets/CONSOLA.TTF);
 }
 
 ::-webkit-scrollbar {
-    width: 2px;
+    width: 0px;
 }
  
 ::-webkit-scrollbar-track {
@@ -118,4 +21,94 @@ a:hover {
 ::-webkit-scrollbar-thumb {
   background-color: rgb(61, 61, 61);
   outline: none
+}
+
+.box {
+  position: absolute;
+  border: 3px solid #292929;
+  height: 96.7%;
+  width: 98.3%;
+  border-radius: 10px;
+  background: transparent;
+  padding: 5px;
+
+}
+
+#textarea {
+  position: relative;
+  resize: none;
+  width: 50%;
+  min-height: 0px;
+  overflow-y: auto;
+  background-color: transparent;
+  pointer-events: none;
+  color: #ffd097;
+  text-shadow: #ffd45d 0px 0px 20px;
+  white-space: pre-wrap;
+}
+
+.inputfield {
+  display: inline-flex;
+  height: 30px;
+  align-items: center;
+  width: 50%;
+  margin-top: 10px;
+  margin-left: 2px;
+  color: #ff9898;
+  text-shadow: #ff6a6a 0px 0px 20px;
+}
+
+#input {
+  width: 90%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 14pt;
+  font-family: Consolas;
+  color: #caffbf;
+  text-shadow: rgba(0,255,111,0.9) 0px 0px 20px;
+}
+
+#root {
+  color: #9bf6ff;
+  text-shadow: #66dbff 0px 0px 20px;
+}
+
+#path {
+  color: #ffd097;
+}
+
+.span {
+  font-family: "Lucida Console";
+  line-height: 14px;
+  font-size: 14px;
+  display: inline-block;
+  color: #caffbf;
+  font-weight: bold;
+  text-shadow: rgba(0,255,111,0.9) 0px 0px 20px;
+}
+
+.noise {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  inset: -200;
+  background-image: url('Assets/noisy-texture-100x100-o100-d20-c-000000-t0.png');
+  top: 0;
+  left: 0;
+  z-index: 5;
+  opacity: 10%;
+  animation: shift 0.2s linear infinite both;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+@keyframes shift {
+  0% {
+    transform: translateX(10%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-10%) translateY(-10%);
+  }
 }
