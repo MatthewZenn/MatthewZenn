@@ -54,8 +54,6 @@ body, html {
   width: 50%;
   margin-top: 10px;
   margin-left: 2px;
-  color: #ff9898;
-  text-shadow: #ff6a6a 0px 0px 20px;
 }
 
 #input {
@@ -65,17 +63,13 @@ body, html {
   border: none;
   font-size: 14pt;
   font-family: Consolas;
-  color: #caffbf;
-  text-shadow: rgba(0,255,111,0.9) 0px 0px 20px;
-}
-
-#root {
-  color: #9bf6ff;
-  text-shadow: #66dbff 0px 0px 20px;
+  color: #ff9898;
+  text-shadow: #ff6a6a 0px 0px 20px;
 }
 
 #path {
-  color: #ffd097;
+  color: #9bf6ff;
+  text-shadow: #66dbff 0px 0px 20px;
 }
 
 .span {

@@ -1,11 +1,10 @@
 var textarea = document.getElementById('textarea');
 var input = document.getElementById('input');
-var root = document.getElementById('root').innerHTML;
 var path = document.getElementById('path').innerHTML;
-var paths = document.getElementById('paths').innerHTML;
 
-const filepath = root+paths+path;
-var command = 'help';
+const filepath = path;
+var command = '';
+var url = "file.txt";
 
 var articles = [];
 
@@ -41,11 +40,15 @@ function logic(){
       textarea.innerHTML += 'GENERAL KENOBI! \n';
       break;
 
-    case 'whoami':
-      
-      break;
-
     default:
+      fetchAsync();
+      textarea.innerHTML += data;
       break;
   }
+}
+
+async function fetchAsync () {
+  let response = await fetch('https://matthewzenn.github.io/MatthewZenn/articles/'+command);
+  let data = await response.body();
+  return data;
 }
