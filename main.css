@@ -1,6 +1,6 @@
 body, html {
-    background-color: rgb(20, 20, 20);
-    font-family: Consolas;
+    background-color: rgb(15, 15, 15);
+    font-family: "Lucida Console";
     font-size: 14pt;
     overflow-x: hidden;
 }
@@ -61,7 +61,7 @@ body, html {
   outline: none;
   border: none;
   font-size: 14pt;
-  font-family: Consolas;
+  font-family: "Lucida Console";
   color: #ff9898;
   text-shadow: #ff6a6a 0px 0px 20px;
 }
@@ -114,5 +114,5 @@ a {
 
 a:hover {
   background-color: #9bf6ff;
-  color: #292929;
+  color: rgb(15, 15, 15);
 }

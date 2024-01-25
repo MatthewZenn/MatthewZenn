@@ -2,7 +2,7 @@ var textarea = document.getElementById('textarea');
 var input = document.getElementById('input');
 var path = document.getElementById('path').innerHTML;
 var command = '';
-var articles = ['Polybius.txt', 'lorem.txt', 'Space.txt'];
+var articles = ['Polybius.txt', 'Lorem.txt', 'Space.txt'];
 
 window.addEventListener('keypress', function(e) {
   if (e.key === 'Enter') {
@@ -13,7 +13,7 @@ window.addEventListener('keypress', function(e) {
 
 function logic(){
   command = input.value;
-  textarea.innerHTML += path + input.value + '\n';
+  textarea.innerHTML += '<br>' + path + input.value + '\n';
   input.value = '';
 
   switch (command) {
@@ -41,8 +41,14 @@ function logic(){
       break;
   
     default:
-      articleFetch();
-      break;
+      if (articles.includes(command)) {
+        articleFetch();
+        break;
+      }
+      else {
+        textarea.innerHTML += command + ' is not recogized as an internal or external command \n';
+        break;
+      }
   }
 }
 
