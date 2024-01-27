@@ -2,7 +2,7 @@ var textarea = document.getElementById('textarea');
 var input = document.getElementById('input');
 var path = document.getElementById('path').innerHTML;
 var command = '';
-var articles = ['Polybius.txt', 'Lorem.txt', 'Space.txt'];
+var articles = ['Polybius.txt', 'lorem.txt', 'haus.txt'];
 
 window.addEventListener('keypress', function(e) {
   if (e.key === 'Enter') {
